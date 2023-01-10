@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/bimg.webp');
+    background-size: cover;
+}
+
+.navigation{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    position: fixed;
+    /* box-shadow:  5px 5px 50px #ece5e5,
+             -5px -5px 50px #ffffff; */
+    z-index: 999;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 17%;
+    margin-left: 15px;
+}
+
+.navbar_nav a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.banner{
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 18%;
+}
+
+.spinner {
+    height: 50px;
+    width: max-content;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1em;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+    
+h1{
+    text-transform: capitalize;
+}
+
+   .spinner h1 {
+    animation: animatsiya 1.75s ease infinite;
+   }
+
+
+
+   @keyframes animatsiya {
+    0%, 100% {
+     transform: translateY(0);
+    }
+
+    50% {
+     transform: translateY(-10px);
+    }
+   }
+
+   /* Mazlumlar */
+
+   .mazlumlar{
+    width: 100%;
+    padding: 4.8rem 0rem;
+   }
+
+   .div_content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 0 20px;
+   }
+
+   .div_item {
+    background-image: linear-gradient(163deg, #010202 0%, #f7f7f7 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    overflow: hidden;
+    padding: 2px 2px;
+   }
+
+   .card {  
+    background-color: black;
+    border-radius:20px;
+    transition: all .2s;
+    padding: 4px 4px;
+    overflow: hidden;
+   }
+
+   .card:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+
+   /* Yetimlar */
+
+   .yetimlar{
+    width: 100%;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+    background-color: whitesmoke;
+   }
+   .yetimlar .title{
+    text-align: center;
+    margin-bottom: 4rem;
+   }
+
+   .scanner span {
+    color: transparent;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+  }
+
+  
+  .scanner span::before {
+    content: "Iltimos yetimlarni yeg'latmang!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 4px solid black;
+    overflow: hidden;
+    color: black;
+    animation: animation 3s linear infinite;
+  }
+
+  @keyframes animation {
+    0%, 10%, 100% {
+      width: 0;
+    }
+
+    10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+      border-right-color: transparent;
+    }
+
+    11%,21%,31%,41%,51%,61%,71%,81%,91% {
+      border-right-color: black;
+    }
+
+    60%, 80% {
+      width: 100%;
+    }
+  }
+
+.block_content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    height: 50vh;
+    margin-top: 2rem;
+}
+
+.block_item {
+
+height: 120px;
+padding: 0.5rem;
+background: rgba(198, 198, 198, 0.34);
+border-radius: 8px;
+backdrop-filter: blur(5px);
+
+border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+transform: skewX(10deg);
+transition: .4s;
+overflow: hidden;
+color: white;
+}
+
+.block_item:hover {
+height: 330px;
+transform: skew(0deg);
+}
+
+.align {
+padding: 1rem;
+display: flex;
+flex-direction: row;
+gap: 5px;
+align-self: flex-start;
+}
+
+.red {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: black;
+box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.yellow {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: white;
+box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.green {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: black;
+box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.block_item h1 {
+font-size: 20px;
+text-align: center;
+margin: 1.3rem;
+color: black;
+text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+.block_item p{
+font-size: 12px;
+color: rgb(65, 62, 62);
+margin-bottom: 0.5rem;
+font-family: var(--lato);
+}
+
+  /* contact  */
+
+  .contact{
+    width: 100%;
+    padding: 4.8rem 0;
+    background-color: rgb(41, 38, 38);
+  }
+  .contact  .title {
+    position: relative;
+    text-align: center;
+    top: -60px;
+
+  }
+
+ .contact  .title span {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    letter-spacing: 5px;
+  }
+
+  .contact .title span:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgb(128, 198, 255);
+  }
+
+  .contact .title span:nth-child(2) {
+    color: rgb(128, 198, 255);
+    -webkit-text-stroke: 1px rgb(128, 198, 255);
+    animation: uiverse723 3s ease-in-out infinite;
+  }
+
+  @keyframes uiverse723 {
+    0%, 100% {
+      clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+       54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+      clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+       51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+  }
+
+
+  .contact__content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .contact__item {
+    padding: 20px;
+    height: 254px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    gap: 1rem;
+  }
+
+  .contact__item >  {
+    margin: 0;
+  }
+
+  .contact__title {
+    color: #333;
+  }
+
+  .contact__item {
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .contact__form input {
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact__form button {
+    height: 40px;
+    width: 70%;
+    margin: 0 auto;
+    transition: all 0.5s linear;
+  }
+  .contact__form button:hover{
+    background-color: #000000;
+    color: white;
+    border: 5px solid rgb(57, 5, 5);
+  }
+
+
+
+  .contact__item2 {
+    height: 254px;
+    background: transparent;
+    border: 2px solid #07ff07;
+    box-shadow: 2px 2px 15px #000000 inset;
+    text-align: center;
+    color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pacifico';
+  }
+
+  .contact__item2:hover {
+    color: #07ff07;
+    box-shadow: 2px 2px 15px #07ff07 inset;
+  }
+
+
+.input {
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: #777;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #0d0c22;
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    color: white;
+   }
+
+   .input:focus, input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: #7a9cc6;
+   }
+
+   .input::placeholder {
+    color: rgb(253, 249, 249);
+   }
+
+   .input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+   }
+  .contact__item2 h2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #2b1d1d;
+    }
+    .footer p{
+      text-align: center;
+      color: white;
+    }
+    .footer a{
+      color: black;
+    }
+    .navbar__nav i{
+      display: none;
+    }
